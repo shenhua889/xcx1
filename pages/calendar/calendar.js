@@ -26,7 +26,7 @@ Page({
       year: curYear,
       month: curMonth,
     })
-    initData(year,month);
+    this.initData(curYear, curMonth);
   },
   initData: function (curYear, curMonth) {
     // 计算最近三个月的对象
