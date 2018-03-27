@@ -7,8 +7,8 @@ Page({
   data: {
     year:0,
     month:0,
-    empty:0,
-    day:0,
+    empty:[],
+    days:[],
     sum:0,
   },
 
@@ -32,6 +32,8 @@ Page({
     // 计算最近三个月的对象
     var cursum=0;
     var day=0;
+    var empty=[];
+    var days=[];
     for(var i=1900;i<curYear;i++)
     {
       if((i%4==0 && i%100!=0) || i%400==0)
@@ -39,7 +41,7 @@ Page({
       else
         cursum+=365;
     }
-    for(var i=1;i<=curYear;i++)
+    for(var i=1;i<=curMonth;i++)
     {
       if(i==2)
       {
@@ -63,8 +65,21 @@ Page({
       cursum+=day;
     }
     cursum-=day;
+    cursum++;
+    console.log(cursum);
+    for(var i=0;i<cursum%7;i++)
+    {
+      empty.push(i);
+    }
+    console.log(empty);
+    for(var i=1;i<=day;i++)
+    {
+      days.push(i);
+    }
+    console.log(days);
     this.setData({
-      day:day,
+      empty:empty,
+      days:days,
     })
   },
   /**

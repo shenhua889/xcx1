@@ -14,7 +14,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/calendar/calendar",
         "iconPath": "icon/calendar.png",
         "selectedIconPath": "icon/calendar.png",
         "text": "日历"
